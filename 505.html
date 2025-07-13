@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ - サンプル企業サイト【テスト環境】</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>サンプル企業サイト【テスト環境】</h1>
+            <nav>
+                <ul>
+                    <li><a href="501.html">ホーム</a></li>
+                    <li><a href="502.html">サービス</a></li>
+                    <li><a href="503.html">料金プラン</a></li>
+                    <li><a href="504.html">会社情報</a></li>
+                    <li><a href="505.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>お問い合わせ</h2>
+        <p>サービスに関するご質問、ご相談はこちらからお気軽にお問い合わせください。AIチャットボットもご利用いただけます。</p>
+
+        <div class="card">
+            <h3>お電話でのお問い合わせ</h3>
+            <p><strong>フリーダイヤル：0120-123-456</strong></p>
+            <p><strong>代表番号：03-1234-5678</strong></p>
+            <p>受付時間：平日 9:00〜18:00（土日祝日を除く）</p>
+            <p style="color: green;">※現在、お電話が混み合っております。オンラインでのお問い合わせをおすすめします。</p>
+        </div>
+
+        <div class="card" style="background-color: #e8f4f8;">
+            <h3>【NEW】AIチャットサポート</h3>
+            <p>24時間365日、AIがお答えします。</p>
+            <button style="background-color: #00bfa5;">チャットを開始する</button>
+        </div>
+
+        <h3>お問い合わせフォーム</h3>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="inquiry-category">お問い合わせカテゴリ <span style="color: red;">*</span></label>
+                <select id="inquiry-category" name="inquiry-category" required>
+                    <option value="">選択してください</option>
+                    <option value="new">新規導入のご相談</option>
+                    <option value="support">既存サービスのサポート</option>
+                    <option value="trouble">障害・不具合のご報告</option>
+                    <option value="other">その他</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="company">会社名・組織名 <span style="color: red;">*</span></label>
+                <input type="text" id="company" name="company" required placeholder="例：株式会社サンプル">
+            </div>
+
+            <div class="form-group">
+                <label for="department">部署名</label>
+                <input type="text" id="department" name="department" placeholder="例：情報システム部">
+            </div>
+
+            <div class="form-group">
+                <label for="name">お名前 <span style="color: red;">*</span></label>
+                <input type="text" id="name" name="name" required placeholder="例：山田太郎">
+            </div>
+
+            <div class="form-group">
+                <label for="email">メールアドレス <span style="color: red;">*</span></label>
+                <input type="email" id="email" name="email" required placeholder="例：sample@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">電話番号 <span style="color: red;">*</span></label>
+                <input type="text" id="phone" name="phone" required placeholder="例：03-1234-5678">
+            </div>
+
+            <div class="form-group">
+                <label for="inquiry-type">お問い合わせ種別 <span style="color: red;">*</span></label>
+                <select id="inquiry-type" name="inquiry-type" required>
+                    <option value="">選択してください</option>
+                    <option value="service">サービスについて</option>
+                    <option value="price">料金・プランについて</option>
+                    <option value="technical">技術的なご質問</option>
+                    <option value="contract">契約・請求について</option>
+                    <option value="support">サポートについて</option>
+                    <option value="partnership">パートナーシップのご提案</option>
+                    <option value="other">その他</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="priority">優先度</label>
+                <select id="priority" name="priority">
+                    <option value="normal">通常</option>
+                    <option value="high">高</option>
+                    <option value="urgent">緊急</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">お問い合わせ内容 <span style="color: red;">*</span></label>
+                <textarea id="message" name="message" required placeholder="お問い合わせ内容を詳しくご記入ください（1000文字まで）" maxlength="1000"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="attachment">添付ファイル</label>
+                <input type="file" id="attachment" name="attachment" accept=".pdf,.doc,.docx,.xls,.xlsx,.png,.jpg,.jpeg">
+                <p style="font-size: 0.9em; color: #666;">※10MBまでのファイルを添付できます</p>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" name="newsletter">
+                    メールマガジンを受け取る
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" required>
+                    <a href="#" style="color: #3498db;">プライバシーポリシー</a>および<a href="#" style="color: #3498db;">利用規約</a>に同意する
+                </label>
+            </div>
+
+            <button type="submit">送信する</button>
+            <button type="button" style="background-color: #6c757d; margin-left: 10px;">下書き保存</button>
+        </form>
+
+        <div class="card" style="margin-top: 30px;">
+            <h3>よくあるご質問（FAQ）</h3>
+            <p><strong>Q: 無料トライアルはありますか？</strong><br>
+            A: はい、全プランで30日間の無料トライアルをご利用いただけます。クレジットカード登録も不要です。</p>
+            
+            <p><strong>Q: 導入までどのくらいかかりますか？</strong><br>
+            A: 通常、お申し込みから1〜2週間程度で導入可能です。エンタープライズプランの場合は、カスタマイズ内容により変動します。</p>
+            
+            <p><strong>Q: サポート体制について教えてください。</strong><br>
+            A: プランに応じて、メール・チャット・電話・訪問サポートをご提供しています。エンタープライズプランでは専任担当者が付きます。</p>
+            
+            <p><strong>Q: 既存システムとの連携は可能ですか？</strong><br>
+            A: はい、豊富なAPIとコネクタを用意しており、多くの既存システムと連携可能です。</p>
+            
+            <p><strong>Q: セキュリティについて心配です。</strong><br>
+            A: ISO27001認証を取得し、業界最高水準のセキュリティを実現しています。詳細は<a href="#" style="color: #3498db;">セキュリティページ</a>をご覧ください。</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px; padding: 20px; background-color: #f8f9fa;">
+            <p>その他のお問い合わせ方法</p>
+            <p>
+                <a href="#" style="margin: 0 10px;">Twitter</a> |
+                <a href="#" style="margin: 0 10px;">Facebook</a> |
+                <a href="#" style="margin: 0 10px;">LinkedIn</a> |
+                <a href="#" style="margin: 0 10px;">YouTube</a>
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 サンプル企業. All rights reserved. | <span style="color: orange;">TEST ENVIRONMENT</span></p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
